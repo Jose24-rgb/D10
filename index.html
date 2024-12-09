@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search</title>
+  <link rel="stylesheet" href="assets/css/style.css"> 
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background-image: url("assets/Img/gif.gif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Job Search</h1>
+      <div class="header-buttons">
+        <button type="button" onclick="changeButtonColor(this)">Post Job</button>
+        <button type="button" onclick="changeButtonColor(this)">Search CV</button>
+        <button type="button" onclick="changeButtonColor(this)">Products</button>
+        <button type="button" onclick="changeButtonColor(this)">Resources</button>
+      </div>
+      <div class="header-buttons right-buttons">
+        <button type="button" onclick="changeButtonColor(this)">Support Center</button>
+        <button type="button" id="authButton" onclick="handleAuthClick()">Login</button>
+        <button type="button" onclick="changeButtonColor(this)">Looking for work</button>
+      </div>
+    </div>
+  </header>
+
+<main>
+  <div class="main-container">
+    <input type="text" id="title" placeholder="Job Title">
+    <input type="text" id="location" placeholder="Location">
+
+    <button onclick="searchOnClick()">Search</button>
+    <button onclick="cancelSearch()">Cancel</button>
+
+    <ul id="results"></ul>
+   </div>
+
+   <div class="comment-container">
+    <div class="comment">
+      <div class="comment-profile">
+        <img src="assets/Img/profile photo 1.jpg" alt="Profile 1">
+      </div>
+      <div>
+        <div class="comment-name">Alessio Salata</div>
+        <div class="comment-text">This is where I find my work from Italy.</div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-profile">
+        <img src="assets/Img/profile photo 2.jpg"Profile 2">
+      </div>
+      <div>
+        <div class="comment-name">Carlos Vasquez</div>
+        <div class="comment-text">I am Spanish, here I am applying as a stylist!.</div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-profile">
+        <img src="assets/Img/profile photo 3.jpg" alt="Profile 3">
+      </div>
+      <div>
+        <div class="comment-name">Carl Johnson</div>
+        <div class="comment-text">I am a chef, I am looking for work, I live in <br>the United Kingdom.</div>
+      </div>
+    </div>
+    <button class="load-more-btn" onclick="showMoreComments()">Show More Comments...</button>
+  </div>
+  
+</main>
+
+
+
+<hr>
+
+<footer>
+  <div class="footer-container">
+    <div class="upload-photo">
+      <h2>Upload a Photo</h2>
+      <p>Upload your CV.</p>
+      <div class="photo-frame" onclick="triggerFileInput()">
+        <img id="uploadedPhoto" src="" alt="" style="display: none;">
+        <input type="file" id="photoUpload" accept="image/*" style="display: none;" onchange="uploadPhoto()">
+      </div>
+      <p id="uploadStatus"></p>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,414 @@
+.header-container {
+  max-width: 1890px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  border: solid;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  height: 60px; 
+  margin-top: -10px;
+}
+
+.header-container h1 {
+  margin: 0; 
+  cursor: pointer; 
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  position: relative;
+}
+
+.header-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 125px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.0s ease; 
+  bottom: -10px;
+  left: 0px;
+}
+
+.header-container h1:active::after {
+  transform: scaleX(1);
+}
+
+.header-buttons {
+  display: flex;
+}
+
+.header-buttons.right-buttons {
+  margin-left: auto;
+}
+
+.header-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(51, 51, 51); 
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative; 
+  transition: background-color 0.3s ease;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.header-buttons button.clicked {
+  color: rgb(92, 144, 255); 
+}
+
+.header-buttons button::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 70px;
+  height: 3px;
+  background-color: rgb(92, 144, 255); 
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.0s ease; 
+  left: 20px;
+}
+
+
+.header-buttons button:hover::after {
+  transform: scaleX(1);
+}
+
+
+.header-buttons button:hover {
+  background-color: rgb(61, 61, 61); 
+}
+
+.header-buttons button#authButton {
+  background-color: rgba(77, 127, 235, 0.445);
+  border-radius: 10px;
+}
+
+.header-buttons button#authButton:hover {
+  background-color: rgba(36, 93, 199, 0.548); 
+}
+
+.header-buttons.right-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(51, 51, 51); 
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header-buttons.right-buttons button:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  height: 3px;
+  background-color: rgb(92, 144, 255);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+  left: 77px;
+  width: 115px;
+}
+
+.header-buttons.right-buttons button:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  height: 3px;
+  background-color: rgb(92, 144, 255);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+  left: 40px;
+  width: 100%;
+}
+
+.header-buttons.right-buttons button:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  height: 3px;
+  background-color: rgb(92, 144, 255);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+  left: 80px;
+  width: 125px;
+}
+
+.header-buttons.right-buttons button:hover::after {
+  transform: translateX(-50%) scaleX(1); 
+}
+
+.header-buttons.right-buttons button.clicked {
+  color: rgb(92, 144, 255);
+}
+
+.main-container {
+  max-width: 1010px;
+  border: 1px solid #bdbbbb;
+  background-color: #f9f9f9; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-left: 170px;
+}
+
+.main-container input {
+  display: block;
+  width: 970px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d1cfcf;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.main-container button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.main-container button:hover {
+  background-color: #0056b3;
+}
+
+.main-container ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.main-container ul li {
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 500px;
+  margin-left: 750px;
+}
+
+.upload-photo {
+  margin-top: 80px;
+  padding: 20px;
+  background-color: #a4b3f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.301);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.upload-photo:hover {
+  box-shadow: 0 8px 16px rgba(243, 180, 45, 0.836); 
+}
+
+.upload-photo h2 {
+  font-size: 24px;
+  font-weight: bold;
+  animation: rainbowText 5s linear infinite;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.upload-photo p {
+  font-size: 16px;
+  color: #111111;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(250, 134, 134, 0.384);
+  border: solid;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-color: red;
+}
+
+.upload-photo input[type="file"] {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  width: 125px;
+}
+
+.upload-photo button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-photo button:hover {
+  background-color: #0056b3;
+}
+
+.upload-photo #uploadStatus {
+  margin-top: 10px;
+  font-size: 16px;
+  color: green;
+}
+
+.photo-frame {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000b164b;
+  border-radius: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  cursor: pointer; 
+}
+
+.photo-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+@keyframes rainbowText {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: greenyellow;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: rgb(99, 0, 99);
+  }
+  85% {
+    color: rgba(0, 0, 0, 0.301)
+  }
+  100% {
+    color: #00d9ff;
+  }
+}
+
+hr {
+  position: absolute;
+  top: 35%;
+  left: 180px;
+  width: 1000px; 
+  border-top: 1px solid rgba(255, 0, 0, 0.151); 
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(255, 3, 3, 0.164);
+}
+
+.comment-container {
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row; 
+  gap: 15px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px; 
+  overflow: hidden;
+}
+
+.comment-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.comment-name {
+  font-weight: bold;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  cursor: pointer;
+}
+
+.comment-text {
+  font-size: 16px;
+  color: #302f2f;
+  font-weight: lighter;
+}
+
+.load-more-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 80px;
+  margin-top: -10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.load-more-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.load-more-btn:active {
+  transform: scale(0.95);
+}
